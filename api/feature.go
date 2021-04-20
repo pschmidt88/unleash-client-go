@@ -43,8 +43,8 @@ type Feature struct {
 	Variants []VariantInternal `json:"variants"`
 }
 
-func (fr FeatureResponse) FeatureMap() map[string]interface{} {
-	features := map[string]interface{}{}
+func (fr FeatureResponse) FeatureMap() map[string]Feature {
+	features := map[string]Feature{}
 	for _, f := range fr.Features {
 		features[f.Name] = f
 	}

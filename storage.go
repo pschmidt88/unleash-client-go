@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+
+	"github.com/Unleash/unleash-client-go/v3/api"
 )
 
 // Storage is an interface that can be implemented in order to have control over how
@@ -18,7 +20,7 @@ type Storage interface {
 	// Reset is called after the repository has fetched the feature toggles from the server.
 	// If persist is true the implementation of this function should call Persist(). The data
 	// passed in here should be owned by the implementer of this interface.
-	Reset(data map[string]interface{}, persist bool) error
+	Reset(data map[string]api.Feature, persist bool) error
 
 	// Load is called to load the data from persistent storage and hold it in memory for fast
 	// querying.
@@ -37,17 +39,17 @@ type Storage interface {
 type defaultStorage struct {
 	appName string
 	path    string
-	data    map[string]interface{}
+	data    map[string]api.Feature
 }
 
 func (ds *defaultStorage) Init(backupPath, appName string) {
 	ds.appName = appName
 	ds.path = filepath.Join(backupPath, fmt.Sprintf("unleash-repo-schema-v1-%s.json", appName))
-	ds.data = map[string]interface{}{}
+	ds.data = make(map[string]api.Feature)
 	ds.Load()
 }
 
-func (ds *defaultStorage) Reset(data map[string]interface{}, persist bool) error {
+func (ds *defaultStorage) Reset(data map[string]api.Feature, persist bool) error {
 	ds.data = data
 	if persist {
 		return ds.Persist()
