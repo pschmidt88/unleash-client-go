@@ -1,10 +1,11 @@
 package strategies
 
 import (
-	"github.com/Unleash/unleash-client-go/v3/context"
-	"github.com/Unleash/unleash-client-go/v3/strategy"
 	"net"
 	"strings"
+
+	"github.com/pschmidt88/unleash-client-go/v3/context"
+	"github.com/pschmidt88/unleash-client-go/v3/strategy"
 )
 
 type remoteAddressStrategy struct {

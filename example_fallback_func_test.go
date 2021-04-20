@@ -2,9 +2,10 @@ package unleash_test
 
 import (
 	"fmt"
-	"github.com/Unleash/unleash-client-go/v3"
-	"github.com/Unleash/unleash-client-go/v3/context"
 	"time"
+
+	"github.com/pschmidt88/unleash-client-go/v3"
+	"github.com/pschmidt88/unleash-client-go/v3/context"
 )
 
 const MissingFeature = "does_not_exist"

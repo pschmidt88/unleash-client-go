@@ -3,7 +3,7 @@ package api
 import (
 	"time"
 
-	"github.com/Unleash/unleash-client-go/v3/api"
+	"github.com/pschmidt88/unleash-client-go/v3/api"
 )
 
 type EventResponse struct {
@@ -21,11 +21,11 @@ type Event struct {
 }
 
 type EventData struct {
-	Name        string     `json:"name"`
-	Description string     `json:"description"`
-	Enabled     bool       `json:"enabled"`
+	Name        string         `json:"name"`
+	Description string         `json:"description"`
+	Enabled     bool           `json:"enabled"`
 	Strategies  []api.Strategy `json:"strategies"`
-	CreatedAt   time.Time  `json:"createdAt"`
+	CreatedAt   time.Time      `json:"createdAt"`
 }
 
 type EventDiff struct {

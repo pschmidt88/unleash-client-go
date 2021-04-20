@@ -1,6 +1,6 @@
 package api
 
-import "github.com/Unleash/unleash-client-go/v3/context"
+import "github.com/pschmidt88/unleash-client-go/v3/context"
 
 var DISABLED_VARIANT = &Variant{
 	Name:    "disabled",

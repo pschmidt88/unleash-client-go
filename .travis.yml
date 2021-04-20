@@ -7,7 +7,7 @@ go:
   - 1.13.x
   - 1.15.x
 
-go_import_path: github.com/Unleash/unleash-client-go/v3
+go_import_path: github.com/pschmidt88/unleash-client-go/v3
 
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter

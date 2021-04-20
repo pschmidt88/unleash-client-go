@@ -1,11 +1,12 @@
 package strategies
 
 import (
-	"github.com/Unleash/unleash-client-go/v3/context"
-	"github.com/Unleash/unleash-client-go/v3/strategy"
-	"github.com/stretchr/testify/assert"
 	"strconv"
 	"testing"
+
+	"github.com/pschmidt88/unleash-client-go/v3/context"
+	"github.com/pschmidt88/unleash-client-go/v3/strategy"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestGradualRolloutUserId_Name(t *testing.T) {

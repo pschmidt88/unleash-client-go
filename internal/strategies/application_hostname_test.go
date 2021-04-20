@@ -1,11 +1,12 @@
 package strategies
 
 import (
-	"github.com/Unleash/unleash-client-go/v3/context"
-	"github.com/Unleash/unleash-client-go/v3/strategy"
-	"github.com/stretchr/testify/assert"
 	"os"
 	"testing"
+
+	"github.com/pschmidt88/unleash-client-go/v3/context"
+	"github.com/pschmidt88/unleash-client-go/v3/strategy"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestApplicationHostnameStrategy_Name(t *testing.T) {

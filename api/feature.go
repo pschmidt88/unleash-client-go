@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/Unleash/unleash-client-go/v3/context"
+	"github.com/pschmidt88/unleash-client-go/v3/context"
 	"github.com/twmb/murmur3"
 )
 

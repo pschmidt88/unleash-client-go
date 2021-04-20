@@ -1,10 +1,11 @@
 package strategies
 
 import (
-	"github.com/Unleash/unleash-client-go/v3/context"
-	"github.com/Unleash/unleash-client-go/v3/strategy"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/pschmidt88/unleash-client-go/v3/context"
+	"github.com/pschmidt88/unleash-client-go/v3/strategy"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestRemoteAddressStrategy_Name(t *testing.T) {

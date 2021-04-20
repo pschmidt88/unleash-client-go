@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Unleash/unleash-client-go/v3/internal/api"
+	"github.com/pschmidt88/unleash-client-go/v3/internal/api"
 )
 
 // MetricsData represents the data sent to the unleash server.
@@ -232,13 +232,13 @@ func (m *metrics) countVariants(name string, variantName string) {
 	if m.options.disableMetrics {
 		return
 	}
-	
+
 	t, _ := m.bucket.Toggles[name]
 	if len(t.Variants) == 0 {
 		t.Variants = make(map[string]int32)
-	} 
+	}
 
-	if _ , ok := t.Variants[variantName]; !ok {
+	if _, ok := t.Variants[variantName]; !ok {
 		t.Variants[variantName] = 1
 	} else {
 		t.Variants[variantName] += 1

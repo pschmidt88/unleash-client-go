@@ -3,8 +3,8 @@ package unleash
 import (
 	"time"
 
-	"github.com/Unleash/unleash-client-go/v3/api"
-	"github.com/Unleash/unleash-client-go/v3/context"
+	"github.com/pschmidt88/unleash-client-go/v3/api"
+	"github.com/pschmidt88/unleash-client-go/v3/context"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
